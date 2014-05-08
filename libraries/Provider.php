@@ -147,6 +147,7 @@ abstract class OAuth2_Provider
 		$params = array(
 			'client_id' 	=> $this->client_id,
 			'client_secret' => $this->client_secret,
+			'scope'			=> is_array($this->scope) ? implode($this->scope_seperator, $this->scope) : $this->scope,
 			'grant_type' 	=> isset($options['grant_type']) ? $options['grant_type'] : 'authorization_code',
 		);
 		

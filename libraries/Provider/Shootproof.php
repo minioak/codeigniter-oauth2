@@ -11,7 +11,9 @@
 
 class OAuth2_Provider_Shootproof extends OAuth2_Provider
 {  
-	public $method = 'GET';
+	public $method = 'POST';
+	
+	protected $scope_seperator = ' ';
 
 	public function url_authorize()
 	{
