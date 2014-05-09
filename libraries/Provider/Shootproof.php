@@ -12,9 +12,11 @@
 class OAuth2_Provider_Shootproof extends OAuth2_Provider
 {  
 	public $method = 'POST';
-	
-	protected $scope_seperator = ' ';
 
+	protected $scope_seperator = ' ';
+	
+	protected $params = array('scope' => 'sp.studio.info sp.event.get_list sp.event.get_photos sp.album.get_list sp.album.get_photos sp.auth.deauthorize');
+	
 	public function url_authorize()
 	{
 		return 'https://auth.shootproof.com/oauth2/authorization/new';
