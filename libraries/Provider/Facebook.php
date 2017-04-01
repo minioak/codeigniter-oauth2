@@ -12,6 +12,8 @@
 class OAuth2_Provider_Facebook extends OAuth2_Provider
 {
 	protected $scope = array('offline_access', 'email', 'read_stream');
+	
+	protected $method = 'POST';
 
 	public function url_authorize()
 	{
